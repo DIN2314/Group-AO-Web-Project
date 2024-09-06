@@ -1,0 +1,246 @@
+/* General styles */
+body {
+    background-color: #f2f2f2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333; /* Text color */
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    transition: 0.5s;
+    background-color: #fff; /* White background */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.shopping {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.shopping img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.shopping img:last-child {
+    width: 30px;
+}
+
+.shopping span {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #f44336;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.list .item {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+}
+
+.list .item:hover {
+    transform: translateY(-5px); /* Hover effect */
+}
+
+.list .item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.list .item .title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #555; /* Title color */
+}
+
+.list .item .price {
+    font-size: 1.1rem;
+    color: #4caf50; /* Price color */
+    margin-bottom: 10px;
+}
+
+.list .item button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
+}
+
+.list .item button:hover {
+    background-color: #45a049;
+}
+
+.cart {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 350px;
+    height: 100vh;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    /* transform: translateX(100%);
+    transition: transform 0.3s ease; */
+    z-index: 1000;
+    overflow-y: scroll; /* Allow scrolling if necessary */
+    scrollbar-width: thin; /* Custom scrollbar for Firefox */
+}
+
+.active .cart {
+    transform: translateX(0%);
+}
+
+.cart h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #555;
+    padding-bottom: 10px;
+}
+
+.listCart {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.listCart li {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 10px;
+    margin-bottom: 15px;
+    align-items: center;
+    padding: 10px;
+    background-color: #444; /* Dark background color */
+    border-radius: 8px;
+}
+
+.listCart li img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.listCart li div {
+    color: #fff; /* Text color */
+}
+
+.listCart li button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
+}
+
+.listCart li button:hover {
+    background-color: #e53935;
+}
+
+.checkOut {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.checkOut .total {
+    font-size: 1.3rem;
+}
+
+.checkOut .closeShopping {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
+}
+
+.checkOut .closeShopping:hover {
+    background-color: #e53935;
+}
+
+.payment {
+    margin-top: 30px;
+    background-color: #fff; /* White background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.payment h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333; /* Text color */
+}
+
+.payment label {
+    font-weight: bold;
+    color: #555; /* Label color */
+}
+
+.payment input {
+    width: calc(100% - 16px); /* Adjust for padding */
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+.payment button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.payment button:hover {
+    background-color: #45a049;
+}
+
+
+

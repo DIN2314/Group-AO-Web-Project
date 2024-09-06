@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Warning notification Notification | CodingNepal</title>
+      <!-- <link rel="stylesheet" href="style.css"> -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+      <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+      <style>
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+
+
+
+
+button{
+
+background:blue;
+color: white;
+border: none;
+cursor: pointer;
+border-radius: 50px;
+font-weight: bold;
+}
+
+
+.notification{
+  background:rgb(191, 255, 0) ;
+  padding: 20px 40px;
+  min-width: 420px;
+  position: absolute;
+  right: 0;
+  top: 10px;
+  border-radius: 30px;
+  border-left: 8px solid green;
+  overflow: hidden;
+  opacity: 0;
+  
+}
+
+
+
+.notification.shownotification{
+  opacity: 1;
+  pointer-events: auto;
+}
+.notification.show{
+  animation: show_slide 0.6s ease forwards;
+}
+@keyframes show_slide {
+  0%{
+    transform: translateX(100%);
+  }
+  40%{
+    transform: translateX(-10%);
+  }
+  80%{
+    transform: translateX(0%);
+  }
+  100%{
+    transform: translateX(-10px);
+  }
+}
+.notification.hide{
+  animation: hide_slide 1s ease forwards;
+}
+@keyframes hide_slide {
+  0%{
+    transform: translateX(-10px);
+  }
+  40%{
+    transform: translateX(0%);
+  }
+  80%{
+    transform: translateX(-10%);
+  }
+  100%{
+    transform: translateX(100%);
+  }
+}
+.notification .fa-trash{
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: black;
+  font-size: 30px;
+  cursor: grabbing;
+}
+.notification .fa-trash:hover{
+  color: red;
+}
+.notification .message{
+  padding: 0 40px;
+  font-size: 18px;
+  color: black;
+}
+.notification .close-btn{
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #ffd080;
+  padding: 20px 18px;
+  cursor: pointer;
+}
+.notification .close-btn:hover{
+  background:#b30000 ;
+}
+.notification .close-btn .fas{
+  color: #ce8500;
+  font-size: 22px;
+  line-height: 40px;
+}
+
+      </style>
+
+
+
+</head>
+   <body>
+      <button>Show it</button>
+      <div class="notification hide">
+         <span class="fas fa-trash"></span>
+         <span class="message">Item removed from  ToyMart  Cart</span>
+         <div class="close-btn">
+            <span class="fas fa-times"></span>
+         </div>
+      </div>
+
+
+      <script>
+
+         $('button').click(function(){
+           $('.notification').addClass("show");
+           $('.notification').removeClass("hide");
+           $('.notification').addClass("shownotification");
+           setTimeout(function(){
+             $('.notification').removeClass("show");
+             $('.notification').addClass("hide");
+           },5000);
+         });
+         $('.close-btn').click(function(){
+           $('.notification').removeClass("show");
+           $('.notification').addClass("hide");
+         });
+
+
+      </script>
+
+
+   </body>
+</html>
+

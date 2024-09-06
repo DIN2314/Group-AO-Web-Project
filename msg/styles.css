@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+.notification_done{
+    background:#03925e ;
+    padding: 20px 40px;
+    min-width: 420px;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    border-radius: 30px;
+    overflow: hidden;
+    opacity: 0;
+  }
+  
+  
+  
+  .notification_done.shownotification{
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .notification_done.show{
+    animation: show_slide 0.6s ease forwards;
+  }
+  @keyframes show_slide {
+    0%{
+      transform: translateX(100%);
+    }
+    40%{
+      transform: translateX(-10%);
+    }
+    80%{
+      transform: translateX(0%);
+    }
+    100%{
+      transform: translateX(-10px);
+    }
+  }
+  .notification_done.hide{
+    animation: hide_slide 1s ease forwards;
+  }
+  @keyframes hide_slide {
+    0%{
+      transform: translateX(-10px);
+    }
+    40%{
+      transform: translateX(0%);
+    }
+    80%{
+      transform: translateX(-10%);
+    }
+    100%{
+      transform: translateX(100%);
+    }
+  }
+  .notification_done .fa-list-alt{
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 30px;
+    cursor: grabbing;
+  }
+  .notification_done .fa-list-alt:hover{
+    color: black;
+  }
+  .notification_done .message{
+    padding: 0 50px;
+    font-size: 18px;
+    color: black;
+  }
+  .notification_done .close-btn{
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #ffd080;
+    padding: 20px 18px;
+    cursor: pointer;
+  }
+  .notification_done .close-btn:hover{
+    background:#b30000 ;
+  }
+  .notification_done .close-btn .fas{
+    color: #ce8500;
+    font-size: 22px;
+    line-height: 40px;
+  }
+
+  .notification_err{
+    background:rgb(255, 255, 0) ;
+    padding: 20px 40px;
+    min-width: 420px;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    border-radius: 30px;
+    
+    overflow: hidden;
+    opacity: 0;
+  
+  }
+  
+  
+  .notification_err.shownotification{
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .notification_err.show{
+    animation: show_slide 0.6s ease forwards;
+  }
+  @keyframes show_slide {
+    0%{
+      transform: translateX(100%);
+    }
+    40%{
+      transform: translateX(-10%);
+    }
+    80%{
+      transform: translateX(0%);
+    }
+    100%{
+      transform: translateX(-10px);
+    }
+  }
+  .notification_err.hide{
+    animation: hide_slide 1s ease forwards;
+  }
+  @keyframes hide_slide {
+    0%{
+      transform: translateX(-10px);
+    }
+    40%{
+      transform: translateX(0%);
+    }
+    80%{
+      transform: translateX(-10%);
+    }
+    100%{
+      transform: translateX(100%);
+    }
+  }
+  .notification_err .fa-images{
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: black;
+    font-size: 30px;
+    cursor: grabbing;
+  }
+  .notification_err .fa-images:hover{
+    color: red;
+  }
+  .notification_err .message{
+    padding: 0 40px;
+    font-size: 18px;
+    color: black;
+  }
+  .notification_err .close-btn{
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #ffd080;
+    padding: 20px 18px;
+    cursor: pointer;
+  }
+  .notification_err .close-btn:hover{
+    background:#b30000 ;
+  }
+  .notification_err .close-btn .fas{
+    color: #ce8500;
+    font-size: 22px;
+    line-height: 40px;
+  }
+
+  .notification_failed{
+    background:#c43e39 ;
+    padding: 20px 40px;
+    min-width: 420px;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    border-radius: 30px;
+    
+    overflow: hidden;
+    opacity: 0;
+  
+  }
+  
+  
+  .notification_failed.shownotification{
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .notification_failed.show{
+    animation: show_slide 0.6s ease forwards;
+  }
+  @keyframes show_slide {
+    0%{
+      transform: translateX(100%);
+    }
+    40%{
+      transform: translateX(-10%);
+    }
+    80%{
+      transform: translateX(0%);
+    }
+    100%{
+      transform: translateX(-10px);
+    }
+  }
+  .notification_failed.hide{
+    animation: hide_slide 1s ease forwards;
+  }
+  @keyframes hide_slide {
+    0%{
+      transform: translateX(-10px);
+    }
+    40%{
+      transform: translateX(0%);
+    }
+    80%{
+      transform: translateX(-10%);
+    }
+    100%{
+      transform: translateX(100%);
+    }
+  }
+  .notification_failed .fa-user-alt-slash{
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 30px;
+    cursor: grabbing;
+  }
+  .notification_failed .fa-user-alt-slash:hover{
+    color: black;
+  }
+  .notification_failed .message{
+    padding: 0 40px;
+    font-size: 18px;
+    color: black;
+  }
+  .notification_failed .close-btn{
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: orange;
+    padding: 20px 18px;
+    cursor: pointer;
+  }
+  .notification_failed .close-btn:hover{
+    background:#b30000 ;
+  }
+  .notification_failed .close-btn .fas{
+    color: #ce8500;
+    font-size: 22px;
+    line-height: 40px;
+  }

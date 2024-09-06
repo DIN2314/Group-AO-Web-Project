@@ -1,0 +1,31 @@
+/* Additional styles for the modal */
+.modal-content {
+    border-radius: 15px;
+    padding: 1.5rem;
+}
+
+.modal-header, .modal-footer {
+    border: none;
+}
+
+.btn-floating {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    font-size: 1.2rem;
+    line-height: 40px;
+    margin: 0 5px;
+}
+
+.btn-rounded {
+    border-radius: 20px;
+}
+
+.card {
+    border-radius: 15px;
+}
+
+.card-body {
+    padding: 2rem;
+}

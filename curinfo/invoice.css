@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #FAFAFA;
+    font: 12pt "Tahoma";
+  }
+  
+  * {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+  }
+  
+  .page {
+    width: 29.7cm;
+    min-height: 21cm;
+    padding: 2cm;
+    margin: auto;
+    border: 1px #D3D3D3 solid;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .subpage {
+    padding: 1cm;
+    border: 1px red solid;
+    width: 256mm;
+    height: 16cm;
+    outline: 2cm #FFEAEA solid;
+  }
+  
+  @page {
+    size: A4 landscape;
+    margin: 0;
+  }
+  @media print {
+    html, body {
+        size: A4 landscape;
+    }}

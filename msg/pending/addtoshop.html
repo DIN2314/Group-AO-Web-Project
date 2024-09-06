@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Warning notification Notification | CodingNepal</title>
+      <!-- <link rel="stylesheet" href="style.css"> -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+      <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+      <style>
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+
+
+
+/* button  එකට use කරන්න දැනටම තියෙන එක​ */
+button{
+
+background:blue;
+color: white;
+border: none;
+cursor: pointer;
+border-radius: 50px;
+font-weight: bold;
+}
+
+
+.notification_done{
+  background:#03925e ;
+  padding: 20px 40px;
+  min-width: 420px;
+  position: absolute;
+  right: 0;
+  top: 10px;
+  border-radius: 30px;
+  overflow: hidden;
+  opacity: 0;
+}
+
+
+
+.notification_done.shownotification{
+  opacity: 1;
+  pointer-events: auto;
+}
+.notification_done.show{
+  animation: show_slide 0.6s ease forwards;
+}
+@keyframes show_slide {
+  0%{
+    transform: translateX(100%);
+  }
+  40%{
+    transform: translateX(-10%);
+  }
+  80%{
+    transform: translateX(0%);
+  }
+  100%{
+    transform: translateX(-10px);
+  }
+}
+.notification_done.hide{
+  animation: hide_slide 1s ease forwards;
+}
+@keyframes hide_slide {
+  0%{
+    transform: translateX(-10px);
+  }
+  40%{
+    transform: translateX(0%);
+  }
+  80%{
+    transform: translateX(-10%);
+  }
+  100%{
+    transform: translateX(100%);
+  }
+}
+.notification_done .fa-list-alt{
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 30px;
+  cursor: grabbing;
+}
+.notification_done .fa-list-alt:hover{
+  color: black;
+}
+.notification_done .message{
+  padding: 0 50px;
+  font-size: 18px;
+  color: black;
+}
+.notification_done .close-btn{
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #ffd080;
+  padding: 20px 18px;
+  cursor: pointer;
+}
+.notification_done .close-btn:hover{
+  background:#b30000 ;
+}
+.notification_done .close-btn .fas{
+  color: #ce8500;
+  font-size: 22px;
+  line-height: 40px;
+}
+
+      </style>
+
+
+
+</head>
+   <body>
+      <button>Show it</button>
+      <div class="notification_addtosp hide">
+         <span class="fas fa-list-alt"></span>
+         <span class="message">Add to ToyMart</span>
+         <div class="close-btn">
+            <span class="fas fa-times"></span>
+         </div>
+      </div>
+
+
+      <script>
+
+         $('button').click(function(){
+           $('.notification_done').addClass("show");
+           $('.notification_done').removeClass("hide");
+           $('.notification_done').addClass("shownotification");
+           setTimeout(function(){
+             $('.notification_done').removeClass("show");
+             $('.notification_done').addClass("hide");
+           },5000);
+         });
+         $('.close-btn').click(function(){
+           $('.notification_done').removeClass("show");
+           $('.notification_done').addClass("hide");
+         });
+
+
+      </script>
+
+
+   </body>
+</html>
+
+
+
+
